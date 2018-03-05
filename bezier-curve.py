@@ -60,8 +60,8 @@ xvals, yvals, zvals = bezier_curve(points, part=100)
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
+ax.plot(xPoints, yPoints, zPoints, c="r", ls="--", lw=1)
+ax.plot(xPoints, yPoints, zPoints, c="r", marker=".", ls="None")
 ax.plot(xvals, yvals, zvals)
-ax.plot(xPoints, yPoints, zPoints, "ro")
-ax.plot(xPoints, yPoints, zPoints, "r")
 
 plt.show()

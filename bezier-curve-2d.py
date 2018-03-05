@@ -39,9 +39,9 @@ def bezier_curve(points, part=100):
 
 points = [[0, 0],
           [0, 1],
-          [1, 1],
-          [1, 0],
-          [0, 0]]
+          [1, 2],
+          [2, 1],
+          [2, 0]]
 
 xPoints = [p[0] for p in points]
 yPoints = [p[1] for p in points]
@@ -55,8 +55,8 @@ xvals, yvals = bezier_curve(points, part=100)
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
+ax.plot(xPoints, yPoints, c="r", ls="--", lw=1)
+ax.plot(xPoints, yPoints, c="r", marker=".", ls="None")
 ax.plot(xvals, yvals)
-ax.plot(xPoints, yPoints, "ro")
-ax.plot(xPoints, yPoints, "r")
 
 plt.show()

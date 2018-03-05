@@ -64,13 +64,12 @@ xvals, yvals, zvals = bezier_surface(points, part=10)
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-ax.plot_trisurf(xvals, yvals, zvals)
-
 xPoints = np.array([[points[i][j][0] for j in range(nV)] for i in range(nU)])
 yPoints = np.array([[points[i][j][1] for j in range(nV)] for i in range(nU)])
 zPoints = np.array([[points[i][j][2] for j in range(nV)] for i in range(nU)])
 
-ax.plot(xPoints.flatten(), yPoints.flatten(), zPoints.flatten(), "ro")
-ax.plot_wireframe(xPoints, yPoints, zPoints, color="r")
+ax.plot(xPoints.flatten(), yPoints.flatten(), zPoints.flatten(), c="r", marker=".", ls="None")
+ax.plot_wireframe(xPoints, yPoints, zPoints, color="r", linestyle="--", linewidth=1)
+ax.plot_trisurf(xvals, yvals, zvals)
 
 plt.show()
