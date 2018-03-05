@@ -64,5 +64,4 @@ ax.plot(xvals, yvals, zvals)
 ax.plot(xPoints, yPoints, zPoints, "ro")
 ax.plot(xPoints, yPoints, zPoints, "r")
 
-
 plt.show()
