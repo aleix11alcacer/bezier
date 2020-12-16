@@ -1,6 +1,6 @@
 # Bezier curves and surfaces
 
-This project allows calculate a Bezier curve or a Bezier surface from a control points list.
+This project displays a Bezier curve or a Bezier surface from a control points list.
 
 - File `bezier-curve-2d.py` represents a Bezier curve in two dimensions.
 
